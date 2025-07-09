@@ -20,7 +20,7 @@ export default function GiftBox() {
        <div className="birthday-message">
   <h2>🎉 Hurray! Happy Birthday 🎂</h2>
   <div className="image-row">
-    <img src="/images/IMG_3362.jpg" alt="Happy Birthday" className="birthday-img" />
+    <img src="/images/IMG_3362.JPG" alt="Happy Birthday" className="birthday-img" />
    
   </div>
 </div>
