@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./LeaveWish.css";
+import emailjs from "@emailjs/browser";
 
 export default function LeaveWish() {
   const [wishes, setWishes] = useState([]);
-  const [form, setForm] = useState({ name: "", message: "" });
+  const [form, setForm] = useState({ from_name: "", message: "" });
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -11,10 +12,21 @@ export default function LeaveWish() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!form.name.trim() || !form.message.trim()) return;
+    if (!form.from_name.trim() || !form.message.trim()) return;
+
+  emailjs.send("service_x17fe38","template_uwj355h",{
+from_name: form.from_name,
+message: form.message,
+email: "akshargohel18@gmail.com",
+},'7YRamT3LVpMBXWpQV').then(() => {
+        alert("Wish sent successfully!");
+      })
+      .catch((err) => {
+        console.log("FAILED...", err);
+      });
 
     setWishes([{ ...form }, ...wishes]);
-    setForm({ name: "", message: "" });
+    setForm({ from_name: "", message: "" });
   };
 
   return (
@@ -24,9 +36,9 @@ export default function LeaveWish() {
       <form className="wish-form mb-4" onSubmit={handleSubmit}>
         <input
           type="text"
-          name="name"
+          name="from_name"
           placeholder="Your Name"
-          value={form.name}
+          value={form.from_name}
           onChange={handleChange}
           required
         />
@@ -43,7 +55,7 @@ export default function LeaveWish() {
       <div className="wish-list">
         {wishes.map((wish, idx) => (
           <div key={idx} className="wish-card">
-            <strong>{wish.name}</strong>
+            <strong>{wish.from_name}</strong>
             <p>{wish.message}</p>
           </div>
         ))}
