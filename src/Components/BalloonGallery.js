@@ -9,13 +9,13 @@ const images = [
   "/images/IMG20231128085012.jpg",
   "/images/IMG20231128091951.jpg",
 "images/IMG20231114112157.jpg",
-  "/images/IMG_3366.jpg",
+  "/images/IMG_3366.JPG",
   "/images/IMG20230623165617.jpg",
   "/images/IMG-20220311-WA0031.jpg",
         "/images/IMG_20230521_072806.jpg",
   "/images/IMG_20230521_073616.jpg",
   "/images/1687521570752.jpg",
-  "/images/IMG_3362.jpg",
+  "/images/IMG_3362.JPG",
   "images/IMG20231114111908.jpg"
 ];
 
