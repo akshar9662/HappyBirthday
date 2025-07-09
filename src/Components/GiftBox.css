@@ -1,0 +1,174 @@
+.gift-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(to bottom, #fff6f6, #ffe6e6);
+}
+
+.gift-box {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  transform-style: preserve-3d;
+  animation: float 1.2s infinite ease-in-out alternate;
+}
+
+.box-body {
+  width: 100%;
+  height: 100%;
+  background: #ff3b3f;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.box-lid {
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  height: 40px;
+  background: #cc2c2f;
+  border-radius: 10px 10px 0 0;
+  transform: rotateX(15deg);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.ribbon-horizontal,
+.ribbon-vertical {
+  position: absolute;
+  background: linear-gradient(to bottom, gold, #ffd700);
+  border-radius: 5px;
+}
+
+.ribbon-horizontal {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  transform: translateY(-50%);
+}
+
+.ribbon-vertical {
+  left: 50%;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotateX(0);
+  }
+  100% {
+    transform: translateY(-8px) rotateX(3deg);
+  }
+}
+
+.birthday-message {
+  text-align: center;
+  animation: fadeInUp 0.7s ease-in-out;
+}
+
+.birthday-message h2 {
+  color: #28a745;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.birthday-img {
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.open-text {
+  margin-top: 12px;
+  width: 180px; /* same as gift-box width */
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+background: linear-gradient(to right, #f9d423, #ff4e50); 
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.open-text:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+.image-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px; /* ✅ modern way to add spacing between flex items */
+  margin-top: 20px;
+}
+
+.birthday-img {
+  border-radius: 10px;
+  height: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.birthday-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 📱 Make layout stack on small screens */
+@media (max-width: 768px) {
+  .gift-wrapper {
+    padding: 20px;
+  }
+
+  .birthday-message h2 {
+    font-size: 20px;
+  }
+
+  .birthday-img {
+    max-width: 90%;  /* reduce image width on mobile */
+    height: auto;
+  }
+
+  .open-text {
+    width: 90%;
+    font-size: 16px;
+  }
+}

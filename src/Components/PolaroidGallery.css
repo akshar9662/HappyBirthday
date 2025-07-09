@@ -1,0 +1,61 @@
+.my-5{
+    background: radial-gradient(#ff80ab, #880e4f);
+  color: white;
+}
+.polaroid-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  
+}
+
+.polaroid {
+  background: white;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* optional: prevent super tall images */
+  object-fit: contain;
+  border-bottom: 8px solid white;
+}
+
+
+.caption {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Add random-looking tilt variations */
+.polaroid-0 {
+  transform: rotate(-5deg);
+}
+.polaroid-1 {
+  transform: rotate(4deg);
+}
+.polaroid-2 {
+  transform: rotate(-3deg);
+}
+.polaroid-3 {
+  transform: rotate(5deg);
+}
+.polaroid-4 {
+  transform: rotate(-4deg);
+}
+
+.polaroid:hover {
+  transform: scale(1.1) rotate(0deg);
+  z-index: 10;
+}

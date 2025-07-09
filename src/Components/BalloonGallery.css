@@ -1,0 +1,33 @@
+.zoom-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 0 15px;
+}
+
+.zoom-card {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.zoom-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  border-radius: 12px;
+}
+
+.zoom-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Optional mobile tweak */
+@media (max-width: 576px) {
+  .zoom-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}

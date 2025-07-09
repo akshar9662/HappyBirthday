@@ -1,0 +1,61 @@
+.wish-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.wish-form input,
+.wish-form textarea {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: none;
+}
+
+.wish-form button {
+  background: #ff69b4;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.wish-form button:hover {
+  background: #e91e63;
+}
+
+.wish-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wish-card {
+  background: #fff0f6;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #ff69b4;
+}
+
+.wish-card strong {
+  display: block;
+  font-size: 18px;
+  color: #c2185b;
+  margin-bottom: 6px;
+}
+
+.wish-card p {
+  margin: 0;
+  font-size: 16px;
+}

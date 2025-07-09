@@ -1,0 +1,19 @@
+.letter-box {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff8e1;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 2px dashed #fbc02d;
+  position: relative;
+  font-family: 'Dancing Script', cursive;
+}
+
+.handwritten {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #5d4037;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');

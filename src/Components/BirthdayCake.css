@@ -1,0 +1,55 @@
+.cake-wrapper {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cake {
+  position: relative;
+  width: 200px;
+  height: 120px;
+  margin: auto;
+  background: #f06292;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.candle {
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  border-radius: 3px;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.candle:nth-child(1) { left: 20%; }
+.candle:nth-child(2) { left: 35%; }
+.candle:nth-child(3) { left: 50%; }
+.candle:nth-child(4) { left: 65%; }
+.candle:nth-child(5) { left: 80%; }
+
+/* 🎨 New candle wax color */
+.wax-color {
+  background: linear-gradient(to bottom, #ff80ab, #ec407a);
+}
+
+/* 🔥 Flame animation */
+.flame {
+  width: 8px;
+  height: 15px;
+  background: radial-gradient(ellipse at center, #ff9800 0%, #ff5722 70%);
+  border-radius: 50%;
+  margin: auto;
+  animation: flicker 0.15s infinite;
+  position: absolute;
+  top: -15px;
+  left: 1px;
+}
+
+@keyframes flicker {
+  0% { transform: scaleY(1); }
+  50% { transform: scaleY(1.2) rotate(1deg); }
+  100% { transform: scaleY(1); }
+}
